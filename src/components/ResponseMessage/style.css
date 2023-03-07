@@ -1,0 +1,13 @@
+.ant-notification {
+  z-index: 1033;
+  color: #000000;
+  margin: 0 16px 0 0;
+}
+.ant-notification .ant-notification-notice-message {
+  font-weight: bold;
+}
+
+.ant-notification-notice.ant-notification-notice-closable {
+  box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.15);
+  top: 64px;
+}

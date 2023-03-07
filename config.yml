@@ -1,0 +1,24 @@
+region: us-east-1
+project: le640-spartans
+
+stacks:
+  collectify:
+    source: ./cloud-formation.yml
+    # -------------------------------------------------------
+    # tags follow all resource that you have permission to
+    # tag and that accept tags as a property that are part
+    # of the stack described herein add as needed
+    # -------------------------------------------------------
+    tags:
+      - AppRepo:
+      - AppCode:
+      - AppVersion:
+      - RevisionHash:
+
+    parameters:
+      - AppName:
+      - AppCode:
+      - S3ContextPath:
+      - Environment:
+      - AppVersion:
+      - RevisionHash:

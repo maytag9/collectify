@@ -1,0 +1,33 @@
+Description: Fixed Response Configuration for SPA UI
+Parameters:
+  AppCode:
+    Type: String
+  AppName:
+    Type: String
+  Environment:
+    Type: String
+  S3ContextPath:
+    Type: String
+  RevisionHash:
+    Type: String
+  AppVersion:
+    Type: String
+
+Resources:
+  # ---------------------------------------------------------
+  # parameters
+  # ---------------------------------------------------------
+
+  AppContextPathParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Type: String
+      Name: !Sub '/${AppCode}/${AppName}${Environment}/s3-asset-path'
+      Value: !Ref S3ContextPath
+
+  AppVersionParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Type: String
+      Name: !Sub '/${AppCode}/${AppName}${Environment}/version'
+      Value: !Sub '${AppVersion}-${RevisionHash}'

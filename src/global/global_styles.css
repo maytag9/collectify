@@ -1,0 +1,322 @@
+.layout-styles,
+.ant-layout {
+  min-height: 100vh;
+  background-color: #ffffff !important;
+  padding-bottom: 65px;
+}
+
+.card-table-wrapper .ant-card-head {
+  color: #f7f7f7;
+  background-color: #0073a8;
+  border-radius: 0;
+}
+.card-table-wrapper-alt .ant-card-head {
+  color: #f7f7f7;
+  background-color: #409231;
+  border-radius: 0;
+}
+.card-table-wrapper .ant-card-body {
+  padding: 0;
+}
+.card-table-wrapper-alt .ant-card-body {
+  padding: 0;
+}
+.card-details-wrapper .ant-descriptions-item-label {
+  font-weight: 600;
+}
+.card-details-wrapper .ant-card-body {
+  padding-bottom: 10px;
+}
+
+.ant-table,
+.ant-dropdown,
+.ant-table-filter-dropdown,
+.ant-btn,
+.ant-input {
+  /*commented to remind that it was overwritten --- font-size: 12px !important;*/
+  font-size: 14px !important;
+}
+
+.ant-table-body {
+  min-height: 200px;
+}
+
+.border-radius-override {
+  border-radius: 0;
+}
+
+/*---------------------------------------- Filter Styling ----------------------------------------*/
+.ant-input {
+  padding: 6px 11px;
+}
+.custom-filter-dropdown .filter-search,
+.custom-filter-dropdown .filter-reset {
+  background: transparent;
+  color: #5c676f;
+  position: absolute;
+}
+.custom-filter-dropdown .filter-search {
+  right: 30px;
+}
+.custom-filter-dropdown .filter-reset {
+  right: 0;
+}
+.custom-filter-dropdown .filter-search:hover,
+.custom-filter-dropdown .filter-reset:hover {
+  color: #40a9ff;
+}
+.custom-filter-dropdown .filter-input,
+.custom-filter-dropdown .filter-search,
+.custom-filter-dropdown .filter-reset {
+  border: 0;
+  height: 40px;
+}
+/*---------------------------------------- Filter Styling END ----------------------------------------*/
+
+/*---------------------------------------- Table Styling START ----------------------------------------*/
+.confirms-table.table-data tr,
+.deals-table.table-data tr {
+  padding: 0;
+  margin: 0;
+  max-height: 35px !important;
+}
+.confirms-table.table-data tr .ant-table-cell,
+.confirms-table.table-data tr th,
+.deals-table.table-data tr .ant-table-cell,
+.deals-table.table-data tr th {
+  margin: 0;
+  padding: 8px 8px;
+}
+
+.ant-table-body {
+  resize: vertical;
+}
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  margin: 16px 16px;
+}
+.ant-descriptions-item-label {
+  text-align: end !important;
+}
+
+.deals-confirm-modal .ant-modal-footer {
+  padding: 10px 30px !important;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 0;
+}
+.deals-confirm-modal .ant-modal-body {
+  height: 80vh;
+  /*overflow: hidden;*/
+  padding-bottom: 55px;
+}
+.modal-row {
+  margin: 0;
+}
+.modal-row .modal-col {
+  padding: 0 0 0 0 !important;
+  /*min-height: 240px !important;*/
+  position: absolute;
+  width: 100%;
+}
+.table-data .ant-table .ant-table-body .ant-table-tbody .ant-table-cell {
+  padding: 4px 10px;
+}
+
+.ant-collapse-content > .ant-collapse-content-box {
+  padding: 0 !important;
+}
+
+.ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+  align-items: center;
+}
+.ant-collapse-header-text h3 {
+  margin: 0;
+}
+/*---------------------------------------- Table Styling END ----------------------------------------*/
+
+.card-header-crumbs .ant-breadcrumb-separator,
+.card-header-crumbs .ant-breadcrumb-link,
+.card-header-crumbs .ant-breadcrumb li:last-child a {
+  color: white;
+  font-size: 16px;
+}
+.card-header-crumbs .ant-breadcrumb-separator:hover,
+.card-header-crumbs .ant-breadcrumb-link:hover,
+.card-header-crumbs .ant-breadcrumb li:last-child a:hover {
+  opacity: 0.8;
+  color: white;
+}
+h3 {
+  margin-bottom: 0;
+}
+.ant-page-header-heading-extra {
+  align-self: center;
+}
+
+/*---------------------------*/
+.strategies-tags-row {
+  background-color: #c4d3df;
+}
+.strategies-tags-row-alt {
+  background-color: #d7f0ca;
+}
+.strategies-tags-row .ant-tag,
+.strategies-tags-row .ant-tag a,
+.strategies-tags-row .ant-tag a:hover {
+  /* color: #1e2f58; */
+}
+.strategies-tags-row .ant-tag,
+.strategies-tags-row-alt .ant-tag {
+  background: rgba(255, 255, 255, 0.5);
+  margin: 4px 2px;
+  border: 1px solid #5b6e9d52;
+}
+
+/*---------------------------*/
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+  margin: 4px 0 !important;
+}
+
+#timeline-wrapper {
+  min-height: 100vh;
+  margin-right: -15rem;
+  transition: margin 0.25s ease-out;
+}
+#timeline-wrapper .ant-card-head .ant-card-head-wrapper .ant-card-head-title {
+  padding: 12px 0;
+}
+#timeline-wrapper .ant-card-head {
+  padding: 0 10px;
+}
+#timeline-wrapper .ant-card-body {
+  overflow-y: scroll;
+  height: calc(100vh - 4em);
+  padding: 20px 10px;
+}
+.wrapper {
+  overflow-x: hidden;
+  display: flex;
+}
+.page-content-wrapper {
+  overflow: hidden;
+  min-width: 100vw;
+  display: block;
+  transition: flex 0.25s ease-out, max-width 0.25s ease;
+}
+.page-content-wrapper .ant-card-body {
+  overflow-y: scroll;
+  height: calc(100vh - 4em);
+}
+
+@media (min-width: 768px) {
+  .page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+#timelineToggle {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+#timelineToggle:hover,
+.timeline-item-group:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+.timeline-date {
+  text-align: center;
+}
+
+.limits-table .ant-table-row {
+  cursor: pointer;
+}
+.ant-table-row:hover .ant-tag,
+.ant-table-row:hover .ant-tag a,
+.ant-table-row:hover .ant-tag a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.limits-table .ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: #dde8f1;
+}
+.ant-tag {
+  border: rgba(0, 0, 0, 0.1);
+}
+.ant-tag-error {
+  color: #ff4d4f;
+  background: #fff2f0 !important;
+  border-color: #ffccc7;
+}
+
+.var-exceeded .ant-progress-inner {
+  background-color: #ff0000 !important;
+}
+.ant-progress .ant-progress-inner,
+.ant-progress .ant-progress-inner .ant-progress-bg {
+  border-radius: 0;
+}
+.ant-card-extra .ant-picker,
+.timeline-date .ant-picker {
+  border-radius: 32px;
+}
+.ant-space-align-center {
+  vertical-align: middle;
+}
+
+.ant-tabs-tab .ant-tag,
+.ant-tabs-tab .ant-tag a,
+.ant-tabs-tab .ant-tag a:hover {
+  margin: 0;
+}
+.ant-tabs-tab {
+  padding: 0 !important;
+  margin: 0;
+}
+.breadcrumb:hover,
+.hoverItem:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.tab-extra {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+}
+
+.internal-limit-monitoring .table-data .ant-table .ant-table-body .ant-table-tbody .ant-table-cell {
+  padding: 4px 10px !important;
+}
+
+.volumeLimitProgressWrapper > .ant-progress-small.ant-progress-line {
+  line-height: 0.7em !important;
+  font-size: 12px !important;
+}
+.volumeLimitProgressWrapper {
+  line-height: 0.1em;
+  font-size: 8px;
+}
+.ant-popover .ant-popover-content {
+  max-height: 338px;
+}
+.ant-popover .ant-popover-content ul {
+  list-style: none;
+  padding-left: 12px;
+}
+.fontSm {
+  font-size: 12px;
+}
+.ant-popover .ant-popover-content hr {
+  opacity: 0.3;
+}
+/* antd 5 temp fix */
+.ant-modal-close-x .ant-modal-close-icon {
+  margin-left: -32px !important;
+}

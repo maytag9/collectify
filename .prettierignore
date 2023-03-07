@@ -1,0 +1,9 @@
+**/.git
+**/node_modules
+.nee
+.idea
+.github
+reports
+dist
+public
+node_modules
