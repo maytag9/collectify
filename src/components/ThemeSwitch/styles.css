@@ -1,0 +1,17 @@
+.ant-switch.theme-switch.ant-switch-checked {
+    background: #33b4a7 !important;
+}
+.ant-switch.theme-switch.ant-switch-checked:hover {
+    background: #2b9f94;
+}
+.ant-switch.ant-switch-checked{
+    background: #33b4a7;
+}
+.ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled){
+    background: #2b9f94 !important;
+}
+.theme-switch-wrapper{
+    position: absolute;
+    right: 0;
+    margin: -2px 12px;
+}

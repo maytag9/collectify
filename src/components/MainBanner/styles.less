@@ -1,0 +1,135 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i';
+.txt__normal     { font-family: 'Lato', sans-serif; font-weight: 400; }
+.txt__normal--it { .txt__normal; font-style: italic; }
+.txt__bold       { font-family: 'Lato', sans-serif; font-weight: 900; }
+.txt__bold--it   { .txt__bold; font-style: italic; }
+
+//html * {  border: inset 1px red; }
+
+/* VARIABLES ================================================*/
+
+@col__black: #000000;
+@col__white: #ffffff;
+
+@sz__small: 14px;
+@sz__medium: 18px;
+@sz__large: 28px;
+
+@mr__small: 20px;
+@mr__medium: 30px;
+@mr__large: 50px;
+
+/* ===========================================================*/
+body {
+  height: 100%;
+  cursor: none;
+}
+
+#cursor {
+  position: absolute;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  background-color: @col__white;
+  opacity: 0;
+  .u-border-radius(50%);
+  &.isVisible {
+    opacity: .2;
+  }
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    border: solid 1px @col__white;
+    opacity: .5;
+    .u-border-box;
+    .u-transform(scale(1.4));
+    .u-border-radius(50%);
+  }
+}
+
+html {
+  background: @col__black;
+  height: 100%;
+  color: @col__white;
+  .txt__normal;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.c-portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.c-mask {
+  -webkit-transition: -webkit-transform .5s;
+  -moz-transition: -moz-transform .5s;
+  -ms-transition: -ms-transform .5s;
+  transition: transform .5s;
+}
+
+.c-portrait__one {
+  background-image: url('http://moonlight.movie/assets/images/header/main01.jpg');
+  clip-path: url(#clipping-one);
+}
+
+.c-portrait__two {
+  background-image: url('http://moonlight.movie/assets/images/header/main02.jpg');
+  clip-path: url(#clipping-two);
+}
+
+.c-portrait__three {
+  background-image: url('http://moonlight.movie/assets/images/header/main03.jpg');
+  clip-path: url(#clipping-three);
+}
+/* UTILITY ===========================================================*/
+
+//border box
+.u-border-box {
+  box-sizing        : border-box;
+  -moz-box-sizing   : border-box;
+  -webkit-box-sizing: border-box;
+}
+// transform
+.u-transform (@handler) {
+  transform        : @handler;
+  -webkit-transform: @handler;
+}
+// horizontal center
+.u-horizontal-center (@mleft) {
+  left       : 50%;
+  margin-left: @mleft;
+}
+// border radius
+.u-border-radius (@radius) {
+  border-radius        : @radius;
+  -webkit-border-radius: @radius;
+}
+// shadow
+.u-shadow (@shadow-h: 0, @shadow-v: 0, @shadow-b: 10px, @shadow-s: 0, @shadow-col: fade(@col__black, 30%)) {
+  box-shadow        : @shadow-h @shadow-v @shadow-b @shadow-s @shadow-col;
+  -webkit-box-shadow: @shadow-h @shadow-v @shadow-b @shadow-s @shadow-col;
+}
+// float elements
+.u-clearfix {
+  &:after {
+    content: '';
+    display: block;
+    float  : none;
+    clear  : both;
+  }
+}

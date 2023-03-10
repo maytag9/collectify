@@ -1,0 +1,68 @@
+#listBanner {
+    cursor: none;
+    background: #000000;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+#listBanner .wrapper {
+    position: relative;
+    max-width: 1024px;
+}
+#cursor {
+    position: absolute;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    opacity: 0;
+    border-radius: 50%;
+    opacity: .2;
+}
+
+#cursor span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    border: solid 1px #ffffff;
+    opacity: .5;
+    transform: scale(1.4);
+    border-radius: 50%;
+}
+
+.c-portrait {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.c-mask {
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    -ms-transition: -ms-transform .5s;
+    transition: transform .5s;
+}
+
+.c-portrait-one {
+    background-image: url('../../Images/movie\ covers/pulp_fiction-1.webp');
+    clip-path: url(#clipping-one);
+}
+
+.c-portrait-two {
+    background-image: url('../../Images/movie\ covers/breaking_bad-1.webp');
+    clip-path: url(#clipping-two);
+}
+
+.c-portrait-three {
+    background-image: url('../../Images/movie\ covers/fight_club-1.webp');
+    clip-path: url(#clipping-three);
+}
+

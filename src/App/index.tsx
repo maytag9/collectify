@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Home from '../pages/home';
 import ListView from '../pages/listView';
-
 const App = () => {
 
   useEffect(() => {

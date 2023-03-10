@@ -1,0 +1,32 @@
+#nav-bar.light {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.88);
+}
+#nav-bar.dark {
+    background-color: #181b25;
+    color: rgba(255, 255, 255, 0.75);
+}
+#nav-bar .logo h1 {
+   /*color: #4c5eff;*/
+    color: #33b4a7;
+}
+#nav-bar .logo h1:hover {
+    /*color: #3f4ed4 !important;*/
+    color: #2b9f94 !important;
+}
+#nav-bar .ant-btn.btn-primary {
+    background-color: #33b4a7;
+    color: #c3fffa !important;
+}
+#nav-bar.dark .ant-btn.btn-primary {
+    background-color: #33b4a7;
+    color: #181b25 !important;
+}
+#nav-bar .ant-btn.btn-primary:hover {
+    background-color: #2b9f94 !important;
+}
+.btn-right {
+    float: right;
+    width: 120px;
+    margin: 20px 16px;
+}

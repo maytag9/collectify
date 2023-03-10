@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from '../../logo.svg';
-import '../../App.css';
+import React from "react";
+import NavBar from "../../components/NavBar";
+import { Layout, Carousel } from "antd";
 
+const { Header } = Layout;
 const Home = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  return (<>
+    <NavBar />
+    <Layout>
+      <Header>
+        <Carousel dots={true}>
+          <div>
+            <h3 style={{
+              height: '160px',
+              color: '#fff',
+              lineHeight: '160px',
+              textAlign: 'center',
+              backgroundImage: "url('../../images/movie-covers/fight_club-1.webp')",
+            }}>1</h3>
+          </div>
+          <div>
+            <h3 style={{
+              height: '160px',
+              color: '#fff',
+              lineHeight: '160px',
+              textAlign: 'center',
+              backgroundImage: "url('../../images/movie-covers/fight_club-1.webp')",
+            }}>2</h3>
+          </div>
+          <div>
+            <h3 style={{
+              height: '160px',
+              color: '#fff',
+              lineHeight: '160px',
+              textAlign: 'center',
+              backgroundImage: "url('../../images/movie-covers/equilibrium-1.jpg')",
+            }}>3</h3>
+          </div>
+          <div>
+            <h3 style={{
+              height: '160px',
+              color: '#fff',
+              lineHeight: '160px',
+              textAlign: 'center',
+              backgroundImage: "url('../../images/movie-covers/fight_club-1.webp')",
+            }}>4</h3>
+          </div>
+        </Carousel>
+      </Header>
+    </Layout>
+  </>)
+};
 
 export default Home;
