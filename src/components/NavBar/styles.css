@@ -3,16 +3,20 @@
     color: rgba(0, 0, 0, 0.88);
 }
 #nav-bar.dark {
-    background-color: #181b25;
+    background-color: #1c1c1c;
     color: rgba(255, 255, 255, 0.75);
 }
-#nav-bar .logo h1 {
+#nav-bar .logo h2 {
    /*color: #4c5eff;*/
     color: #33b4a7;
 }
-#nav-bar .logo h1:hover {
+#nav-bar .logo h2:hover {
     /*color: #3f4ed4 !important;*/
     color: #2b9f94 !important;
+}
+#nav-bar .logo:hover {
+    /*color: #3f4ed4 !important;*/
+    opacity: .8;
 }
 #nav-bar .ant-btn.btn-primary {
     background-color: #33b4a7;
