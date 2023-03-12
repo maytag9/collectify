@@ -2,6 +2,7 @@ import React from "react";
 import { Layout, Space } from 'antd';
 import Logo from '../Logo';
 import AddItemButton from '../AddItemButton';
+import ViewListButton from "../ViewListButton";
 import ThemeSwitch from '../ThemeSwitch';
 import './styles.css';
 
@@ -31,13 +32,19 @@ const { Header } = Layout;
   );
 };*/
 
-const NavBar = () => {
+interface INavBar {
+  mode: boolean;
+  setMode: (mode: boolean) => void;
+}
+
+const NavBar: React.FunctionComponent<INavBar> = ({mode, setMode}) => {
   return (
     <Space direction="vertical" style={{width: '100%'}}>
       <Header id="nav-bar" className='light'>
         <Logo/>
+        <ViewListButton/>
         <AddItemButton/>
-        <ThemeSwitch/>
+        <ThemeSwitch mode={mode} setMode={setMode}/>
       </Header>
     </Space>
   );

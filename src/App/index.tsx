@@ -11,7 +11,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/list:listId" element={<ListView/>}/>
+        <Route path="/collections" element={<ListView/>}/>
         <Route path="/" element={<Home />}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

@@ -14,17 +14,24 @@
     /*color: #3f4ed4 !important;*/
     color: #2b9f94 !important;
 }
+#nav-bar .logo {
+    cursor: pointer;
+}
 #nav-bar .logo:hover {
     /*color: #3f4ed4 !important;*/
     opacity: .8;
 }
 #nav-bar .ant-btn.btn-primary {
     background-color: #33b4a7;
-    color: #c3fffa !important;
+    color: #FFF !important;
 }
 #nav-bar.dark .ant-btn.btn-primary {
     background-color: #33b4a7;
-    color: #181b25 !important;
+    color: #1C1C1C !important;
+}
+#nav-bar .ant-btn.add-new{
+    margin-left: 0;
+    margin-right: 0;
 }
 #nav-bar .ant-btn.btn-primary:hover {
     background-color: #2b9f94 !important;

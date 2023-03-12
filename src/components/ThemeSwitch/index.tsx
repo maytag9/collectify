@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import { BulbFilled, BulbOutlined } from '@ant-design/icons';
 import { Switch, Space } from 'antd';
 import './styles.css';
-
-const ThemeSwitch = () => {
-  const [checked, setChecked] = useState(true);
+interface IThemeSwitch {
+  mode: boolean;
+  setMode: (mode: boolean) => void;
+}
+const ThemeSwitch: React.FunctionComponent<IThemeSwitch> = ({mode, setMode}) => {
 
   return (<Space direction="vertical" className="theme-switch-wrapper">
     <Switch
@@ -13,14 +15,14 @@ const ThemeSwitch = () => {
       unCheckedChildren={<BulbFilled />}
       size="small"
       onClick={() => {
-          setChecked(!checked);
+          setMode(!mode);
           const nav = document.getElementById('nav-bar');
           console.log('nav')
-          if (checked && nav) {
+          if (mode && nav) {
             nav?.classList.add("dark");
             nav?.classList.remove("light")
           }
-          if (!checked && nav) {
+          if (!mode && nav) {
             nav?.classList.add("light");
             nav?.classList.remove("dark")
           }

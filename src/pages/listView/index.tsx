@@ -1,11 +1,13 @@
 import React from "react";
 import MainWrapper from "../../components/MainWrapper";
-import NavBar from "../../components/NavBar";
+import NavWrapper from "../../components/NavWrapper";
 
 const ListView = () => {
   return (<>
-    <NavBar />
-    <MainWrapper/>
+    <NavWrapper navbar={true} content={
+        <MainWrapper/>
+      }
+    />
   </>)
 };
 
