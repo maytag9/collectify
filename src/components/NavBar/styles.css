@@ -17,6 +17,12 @@
   height: 100vh;
   overflow: scroll;
 }
+.content-wrapper.coming-soon {
+  overflow: hidden;
+}
+.content-wrapper.dark {
+  background-color: #161616;
+}
 #nav-bar .logo h2 {
   /*color: #4c5eff;*/
   color: #33b4a7;

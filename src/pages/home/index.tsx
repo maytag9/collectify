@@ -1,56 +1,94 @@
-import React from "react";
-import { Layout, Carousel } from "antd";
-import NavWrapper from "../../components/NavWrapper";
+import React from 'react';
+import { Carousel, Col, Row } from 'antd';
+import NavWrapper from '../../components/NavWrapper';
 
-const { Header } = Layout;
 const Home = () => {
-  return (<>
-    <NavWrapper navbar={true} content={
-        <Layout>
-          <Header>
-            <Carousel dots={true}>
+  return (
+    <>
+      <NavWrapper
+        navbar={true}
+        home={true}
+        content={
+          <>
+            <Row style={{ position: 'absolute', zIndex: '500', width: '100%' }}>
+              <Col span={24}>
+                <h1
+                  style={{
+                    height: '50vh',
+                    color: '#fff',
+                    lineHeight: '70vh',
+                    textAlign: 'center',
+                    margin: 'auto',
+                    padding: '60px',
+                    fontSize: '60px',
+                    zIndex: '500'
+                  }}
+                >
+                  COMING SOON
+                </h1>
+              </Col>
+            </Row>
+            <Carousel autoplay={true} dots={true}>
               <div>
-                <h3 style={{
-                  height: '160px',
-                  color: '#fff',
-                  lineHeight: '160px',
-                  textAlign: 'center',
-                  backgroundImage: "url('../../images/movie-covers/fight_club-1.webp')",
-                }}>1</h3>
+                <div
+                  style={{
+                    height: '96vh',
+                    backgroundImage: "url('https://i.imgur.com/mHCae9Q.png')",
+                    margin: '0',
+                    backgroundSize: 'contain',
+                    filter: 'brightness(0.5)' //'grayscale(1)',
+                  }}
+                />
               </div>
               <div>
-                <h3 style={{
-                  height: '160px',
-                  color: '#fff',
-                  lineHeight: '160px',
-                  textAlign: 'center',
-                  backgroundImage: "url('../../images/movie-covers/fight_club-1.webp')",
-                }}>2</h3>
+                <h3
+                  style={{
+                    height: '96vh',
+                    backgroundImage: "url('https://i.imgur.com/2EMkAsU.png')",
+                    margin: '0',
+                    backgroundSize: '2400px',
+                    backgroundRepeat: 'repeat'
+                  }}
+                />
               </div>
               <div>
-                <h3 style={{
-                  height: '160px',
-                  color: '#fff',
-                  lineHeight: '160px',
-                  textAlign: 'center',
-                  backgroundImage: "url('../../images/movie-covers/equilibrium-1.jpg')",
-                }}>3</h3>
+                <h3
+                  style={{
+                    height: '96vh',
+                    backgroundImage: "url('https://i.imgur.com/rwIUWaM.jpg')",
+                    margin: '0',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                />
               </div>
               <div>
-                <h3 style={{
-                  height: '160px',
-                  color: '#fff',
-                  lineHeight: '160px',
-                  textAlign: 'center',
-                  backgroundImage: "url('../../images/movie-covers/fight_club-1.webp')",
-                }}>4</h3>
+                <h3
+                  style={{
+                    height: '96vh',
+                    backgroundImage: "url('https://i.imgur.com/0e8oBcs.png')",
+                    margin: '0',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+              </div>
+              <div>
+                <h3
+                  style={{
+                    height: '96vh',
+                    backgroundImage: "url('https://i.imgur.com/6JBQhUs.jpg')",
+                    margin: '0',
+                    backgroundSize: 'cover'
+                  }}
+                />
               </div>
             </Carousel>
-          </Header>
-        </Layout>
-      }
-    />
-  </>)
+          </>
+        }
+      />
+    </>
+  );
 };
 
 export default Home;

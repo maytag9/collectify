@@ -36,23 +36,26 @@ const { Header } = Layout;
 interface INavBar {
   mode: boolean;
   setMode: (mode: boolean) => void;
+  home?: boolean;
 }
 
-const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode }) => {
+const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
   return (
     <Space direction="vertical" style={{ width: '100%' }}>
       <Header id="nav-bar" className="light">
         <Logo />
-        <Button
-          className="btn-primary btn-right"
-          shape="round"
-          size="small"
-          style={{ width: '30px', height: '30px', padding: '0', margin: '17px 12px 17px 0px' }}
-        >
-          <UserOutlined />
-        </Button>
-        <ViewListButton />
-        <AddItemButton />
+        {!home && (
+          <Button
+            className="btn-primary btn-right"
+            shape="round"
+            size="small"
+            style={{ width: '30px', height: '30px', padding: '0', margin: '17px 12px 17px 0px' }}
+          >
+            <UserOutlined />
+          </Button>
+        )}
+        {!home && <ViewListButton />}
+        {!home && <AddItemButton />}
 
         <ThemeSwitch mode={mode} setMode={setMode} />
       </Header>
