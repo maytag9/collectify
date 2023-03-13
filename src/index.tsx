@@ -3,17 +3,17 @@ import { render } from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RecoilRoot } from 'recoil';
-import RecoilizeDebugger from 'recoilize';
+// import { RecoilRoot } from 'recoil';
+// import RecoilizeDebugger from 'recoilize';
 
 const root = document.getElementById('root') as HTMLElement;
 
 render(
   <React.StrictMode>
-      <RecoilRoot>
-        <RecoilizeDebugger />
-          <App />
-      </RecoilRoot>
+    {/*<RecoilRoot>*/}
+    {/*<RecoilizeDebugger />*/}
+    <App />
+    {/*</RecoilRoot>*/}
   </React.StrictMode>,
   root
 );
