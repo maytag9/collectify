@@ -6,6 +6,7 @@ import ViewListButton from '../ViewListButton';
 import ThemeSwitch from '../ThemeSwitch';
 import { UserOutlined } from '@ant-design/icons';
 import './styles.css';
+import { useNavigate } from 'react-router';
 
 const { Header } = Layout;
 
@@ -40,20 +41,21 @@ interface INavBar {
 }
 
 const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
+  const navigate = useNavigate();
+
   return (
     <Space direction="vertical" style={{ width: '100%' }}>
       <Header id="nav-bar" className="light">
         <Logo />
-        {!home && (
-          <Button
-            className="btn-primary btn-right"
-            shape="round"
-            size="small"
-            style={{ width: '30px', height: '30px', padding: '0', margin: '17px 12px 17px 0px' }}
-          >
-            <UserOutlined />
-          </Button>
-        )}
+        <Button
+          className="btn-primary btn-right"
+          shape="round"
+          size="small"
+          onClick={() => navigate('/collections')}
+          style={{ width: '30px', height: '30px', padding: '0', margin: '17px 12px 17px 0px' }}
+        >
+          <UserOutlined />
+        </Button>
         {!home && <ViewListButton />}
         {!home && <AddItemButton />}
 
