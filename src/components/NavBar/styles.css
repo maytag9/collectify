@@ -1,52 +1,57 @@
 #nav-bar.light {
-    background-color: #ffffff;
-    color: rgba(0, 0, 0, 0.88);
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.88);
 }
 #nav-bar.dark {
-    background-color: #1c1c1c;
-    color: rgba(255, 255, 255, 0.75);
+  background-color: #161616;
+  color: rgba(255, 255, 255, 0.75);
 }
 #nav-bar {
-    position: absolute;
-    top: 0;
-    z-index: 10000;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
 }
-.content-wrapper{
-    margin-top: 40px;
+.content-wrapper {
+  margin-top: 40px;
+  height: 100vh;
+  overflow: scroll;
 }
 #nav-bar .logo h2 {
-   /*color: #4c5eff;*/
-    color: #33b4a7;
+  /*color: #4c5eff;*/
+  color: #33b4a7;
 }
 #nav-bar .logo h2:hover {
-    /*color: #3f4ed4 !important;*/
-    color: #2b9f94 !important;
+  /*color: #3f4ed4 !important;*/
+  color: #2b9f94 !important;
 }
 #nav-bar .logo {
-    cursor: pointer;
+  cursor: pointer;
 }
 #nav-bar .logo:hover {
-    /*color: #3f4ed4 !important;*/
-    opacity: .8;
+  /*color: #3f4ed4 !important;*/
+  opacity: 0.8;
 }
 #nav-bar .ant-btn.btn-primary {
-    background-color: #33b4a7;
-    color: #FFF !important;
+  background-color: #33b4a7;
+  color: #fff !important;
 }
 #nav-bar.dark .ant-btn.btn-primary {
-    background-color: #33b4a7;
-    color: #1C1C1C !important;
+  background-color: #33b4a7;
+  color: #1c1c1c !important;
 }
-#nav-bar .ant-btn.add-new{
-    margin-left: 0;
-    margin-right: 0;
+#nav-bar .ant-btn.add-new {
+  margin-left: 0;
+  margin-right: 0;
 }
 #nav-bar .ant-btn.btn-primary:hover {
-    background-color: #2b9f94 !important;
+  background-color: #2b9f94 !important;
 }
 .btn-right {
-    float: right;
-    width: 120px;
-    margin: 20px 16px;
+  float: right;
+  width: 120px;
+  margin: 20px 16px;
+}
+.ant-drawer {
+  margin-top: 64px;
 }

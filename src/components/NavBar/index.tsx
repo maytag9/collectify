@@ -1,10 +1,10 @@
-import React from "react";
-import { Button, Layout, Space } from "antd";
+import React from 'react';
+import { Button, Layout, Space } from 'antd';
 import Logo from '../Logo';
-import AddItemButton from '../AddItemButton';
-import ViewListButton from "../ViewListButton";
+import AddItemButton from '../AddItem/AddItemButton';
+import ViewListButton from '../ViewListButton';
 import ThemeSwitch from '../ThemeSwitch';
-import {UserOutlined} from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
 import './styles.css';
 
 const { Header } = Layout;
@@ -38,21 +38,23 @@ interface INavBar {
   setMode: (mode: boolean) => void;
 }
 
-const NavBar: React.FunctionComponent<INavBar> = ({mode, setMode}) => {
+const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode }) => {
   return (
-    <Space direction="vertical" style={{width: '100%'}}>
-      <Header id="nav-bar" className='light'>
-        <Logo/>
+    <Space direction="vertical" style={{ width: '100%' }}>
+      <Header id="nav-bar" className="light">
+        <Logo />
         <Button
           className="btn-primary btn-right"
           shape="round"
           size="small"
-          style={{width: "30px", height: "30px", padding: '0', margin: "17px 12px 17px 0px"}}>
-          <UserOutlined /></Button>
-        <ViewListButton/>
-        <AddItemButton/>
+          style={{ width: '30px', height: '30px', padding: '0', margin: '17px 12px 17px 0px' }}
+        >
+          <UserOutlined />
+        </Button>
+        <ViewListButton />
+        <AddItemButton />
 
-        <ThemeSwitch mode={mode} setMode={setMode}/>
+        <ThemeSwitch mode={mode} setMode={setMode} />
       </Header>
     </Space>
   );
