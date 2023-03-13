@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Button, Col, DatePicker, Drawer, Form, Input, Row, Select, Space} from 'antd';
-import {PlusOutlined} from '@ant-design/icons'
+import {PlusSquareOutlined} from '@ant-design/icons'
 const { Option } = Select;
 
 const AddItemButton = () => {
@@ -14,7 +14,7 @@ const AddItemButton = () => {
         className="btn-primary btn-right add-new"
         onClick={showDrawer}
         size="small"
-        icon={<PlusOutlined />}
+        icon={<PlusSquareOutlined />}
       />
       {drawerVisible &&
         <Drawer

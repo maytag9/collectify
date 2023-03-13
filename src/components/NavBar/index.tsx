@@ -1,9 +1,10 @@
 import React from "react";
-import { Layout, Space } from 'antd';
+import { Button, Layout, Space } from "antd";
 import Logo from '../Logo';
 import AddItemButton from '../AddItemButton';
 import ViewListButton from "../ViewListButton";
 import ThemeSwitch from '../ThemeSwitch';
+import {UserOutlined} from '@ant-design/icons';
 import './styles.css';
 
 const { Header } = Layout;
@@ -42,8 +43,15 @@ const NavBar: React.FunctionComponent<INavBar> = ({mode, setMode}) => {
     <Space direction="vertical" style={{width: '100%'}}>
       <Header id="nav-bar" className='light'>
         <Logo/>
+        <Button
+          className="btn-primary btn-right"
+          shape="round"
+          size="small"
+          style={{width: "30px", height: "30px", padding: '0', margin: "17px 12px 17px 0px"}}>
+          <UserOutlined /></Button>
         <ViewListButton/>
         <AddItemButton/>
+
         <ThemeSwitch mode={mode} setMode={setMode}/>
       </Header>
     </Space>

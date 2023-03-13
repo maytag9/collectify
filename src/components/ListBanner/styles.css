@@ -7,15 +7,13 @@
 }
 #listBanner .wrapper {
     position: relative;
-    max-width: 1024px;
 }
 #cursor {
     position: absolute;
     z-index: 1000;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #ffffff;
-    opacity: 0;
     border-radius: 50%;
     opacity: .2;
 }
@@ -24,7 +22,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    padding: 2px;
+    padding: 1px;
     border: solid 1px #ffffff;
     opacity: .5;
     transform: scale(1.4);
@@ -52,17 +50,69 @@
 }
 
 .c-portrait-one {
-    background-image: url('../../Images/movie\ covers/pulp_fiction-1.webp');
+    background-image: url('https://i.imgur.com/DDloP4R.jpg');
+    background-size: auto;
     clip-path: url(#clipping-one);
+    border: 1px solid red;
+    height: 200px;
 }
 
 .c-portrait-two {
-    background-image: url('../../Images/movie\ covers/breaking_bad-1.webp');
+    background-image: url('https://i.imgur.com/SnNH7nq.png');
+    background-size: auto;
     clip-path: url(#clipping-two);
+    border: 1px solid green;
+    height: 200px;
 }
 
 .c-portrait-three {
-    background-image: url('../../Images/movie\ covers/fight_club-1.webp');
+    background-image: url('https://i.imgur.com/SnNH7nq.png');
+    background-size: cover;
     clip-path: url(#clipping-three);
+    border: 1px solid blue;
+    height: 200px;
 }
 
+#listBanner .bg-wrapper{
+ background-image: url("https://i.imgur.com/4IR2GZF.png");
+ background-position: top;
+ background-size: contain;
+ background-repeat-x: repeat;
+ filter: blur(0.5px);
+ width: 100%;
+ height: 100%;
+ z-index: 200;
+}
+#listBanner .bg-wrapper:hover{
+    filter: blur(0px) !important;
+}
+#listBanner .ant-card-body{
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 400;
+}
+#listBanner .wrapper{
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 600;
+}
+#listBanner h1{
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    color: #fff;
+    z-index: 1000;
+}

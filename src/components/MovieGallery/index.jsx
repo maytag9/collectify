@@ -71,7 +71,7 @@ const items = [
   },*/
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/JJC3A0P.png",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -79,7 +79,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/UBLzQEe.jpg",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -87,7 +87,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/0f8qXl0.jpg",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -95,7 +95,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/pMO4GoQ.jpg",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -103,7 +103,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/G6da2r8.jpg",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -111,7 +111,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/O3bIJHl.png",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -119,7 +119,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/f9v0SNI.jpg",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -127,7 +127,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/uy7p0P6.jpg",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -135,7 +135,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/VACk9jq.jpg",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -143,7 +143,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/hOv4THG.png",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -151,7 +151,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/VHKeMw4.png",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",
@@ -159,7 +159,7 @@ const items = [
   },
   {
     imgAlt: "example",
-    imgSrc: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    imgSrc: "https://i.imgur.com/3sCGHxa.png",
     actions: true,
     avatarSrc:"https://joesch.moe/api/v1/random",
     title:"Card title",

@@ -10,7 +10,7 @@ const NavWrapper: React.FunctionComponent<INavWrap> =
 
   return (<>
     {navbar && <NavBar mode={mode} setMode={setMode}/>}
-    {content}
+    <div className="content-wrapper">{content}</div>
   </>)
 };
 
