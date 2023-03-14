@@ -1,7 +1,7 @@
 import { Breadcrumb, Layout } from 'antd';
 import '../../App.css';
 import React from 'react';
-import ItemGallery from '../ItemGallery';
+// import ItemGallery from '../ItemGallery';
 import MovieGallery from '../MovieGallery';
 import ListBanner from '../ListBanner';
 
@@ -15,11 +15,11 @@ const MainWrapper = () => {
 				collapsed={collapsed}
 				setCollapsed={setCollapsed}
 			/>*/}
-      <ListBanner/>
-      <Layout style={{padding: '0 24px 24px'}}>
+      <ListBanner />
+      <Layout style={{ padding: '0 24px 24px' }}>
         <Breadcrumb
           style={{
-            margin: '16px 0',
+            margin: '16px 0'
           }}
         >
           <Breadcrumb.Item>Home</Breadcrumb.Item>
@@ -30,14 +30,14 @@ const MainWrapper = () => {
           style={{
             padding: 24,
             margin: 0,
-            minHeight: 280,
+            minHeight: 280
           }}
         >
-          <ItemGallery />
-          <br/>
-          <MovieGallery/>
+          {/*<ItemGallery />
+          <br/>*/}
+          <MovieGallery />
         </Content>
-        <Footer style={{textAlign: 'center'}}>
+        <Footer style={{ textAlign: 'center' }}>
           Collectify ©2023 Created by Maytag @insert-company-name-here?
         </Footer>
       </Layout>

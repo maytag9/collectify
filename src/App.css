@@ -51,20 +51,20 @@
 }
 
 .nav-sticky {
-  position: 'sticky';
+  position: sticky;
   top: 0;
   z-index: 1;
-  width: '100%';
+  width: 100%;
 }
 .nav-wrapper {
-  float: 'left';
-  width: 120;
-  height: 31;
-  margin: '16px 24px 16px 0';
-  background: 'rgba(255, 255, 255, 0.2)';
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 6px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-body{
+body {
   overflow: hidden;
 }
 /*
@@ -98,27 +98,40 @@ body{
   color: #aaa;
 }
 /*-------------------*/
-.ant-layout .ant-layout-header{
+.ant-layout .ant-layout-header {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.88);
 }
-.ant-layout .ant-layout-header.dark{
+.ant-layout .ant-layout-header.dark {
   background-color: #181818;
   color: rgba(255, 255, 255, 0.75);
 }
 
-.logo h1{
+.logo h1 {
   color: #4c5eff;
 }
-.logo h1:hover{
+.logo h1:hover {
   color: #3f4ed4 !important;
 }
-.ant-btn-default{
+.ant-btn-default {
   background-color: #4c5eff;
-  border: 0px solid #ccc !important;
+  border: 0 solid #ccc !important;
   color: #eee !important;
 }
-button.ant-btn-default:hover, button.ant-btn-default:focus{
+button.ant-btn-default:hover,
+button.ant-btn-default:focus {
   background-color: #3f4ed4;
   color: #f5f5f5 !important;
+}
+.ant-layout,
+.ant-layout-footer {
+  background-color: transparent !important;
+  color: #161616;
+}
+.content-wrapper.dark .ant-layout,
+.content-wrapper.dark .ant-layout-footer,
+.content-wrapper.dark .ant-layout .ant-breadcrumb,
+.content-wrapper.dark .ant-layout .ant-breadcrumb .ant-breadcrumb-link,
+.content-wrapper.dark .ant-layout .ant-breadcrumb .ant-breadcrumb-separator {
+  color: #f5f5f5;
 }
