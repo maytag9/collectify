@@ -41,7 +41,7 @@ const Home = () => {
                   }}
                 />
               </div>
-              <div>
+              {/*<div>
                 <h3
                   style={{
                     height: '96vh',
@@ -53,7 +53,7 @@ const Home = () => {
                     backgroundSize: 'cover'
                   }}
                 />
-              </div>
+              </div>*/}
               <div>
                 <h3
                   style={{
