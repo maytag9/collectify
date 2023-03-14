@@ -35,7 +35,8 @@ const Home = () => {
                     height: '96vh',
                     backgroundImage: "url('https://i.imgur.com/mHCae9Q.png')",
                     margin: '0',
-                    backgroundSize: 'contain',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     filter: 'brightness(0.5)' //'grayscale(1)',
                   }}
                 />
@@ -46,8 +47,10 @@ const Home = () => {
                     height: '96vh',
                     backgroundImage: "url('https://i.imgur.com/2EMkAsU.png')",
                     margin: '0',
-                    backgroundSize: '2400px',
-                    backgroundRepeat: 'repeat'
+                    // backgroundSize: '2400px',
+                    backgroundRepeat: 'repeat',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
                   }}
                 />
               </div>
@@ -69,7 +72,8 @@ const Home = () => {
                     backgroundImage: "url('https://i.imgur.com/0e8oBcs.png')",
                     margin: '0',
                     backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'top'
                   }}
                 />
               </div>
