@@ -1,0 +1,7 @@
+.ant-card .ant-card-cover img:hover {
+  opacity: 0.8;
+}
+.ant-card .ant-card-actions {
+  position: absolute;
+  bottom: 0;
+}
