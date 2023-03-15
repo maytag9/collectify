@@ -1,0 +1,16 @@
+button.theme-switch,
+button.theme-switch.ant-btn-default:hover,
+button.theme-switch.ant-btn-default:focus {
+  background: transparent !important;
+  color: #33b4a7 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.theme-switch:hover {
+  opacity: 0.8 !important;
+}
+.theme-switch-wrapper {
+  position: absolute;
+  right: 0;
+  margin: -2px 12px;
+}

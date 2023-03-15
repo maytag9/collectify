@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button, Layout, Space } from 'antd';
 import Logo from '../Logo';
 import AddItemButton from '../AddItem/AddItemButton';
-import ViewListButton from '../ViewListButton';
-import ThemeSwitch from '../ThemeSwitch';
+import ViewListButton from '../ViewList/ViewListButton';
+import ThemeSwitchButton from '../ThemeButton';
 import { UserOutlined } from '@ant-design/icons';
 import './styles.css';
 import { useNavigate } from 'react-router';
@@ -43,6 +43,18 @@ interface INavBar {
 const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const nav = document.getElementById('nav-bar');
+    if (mode && nav) {
+      nav?.classList.add('light');
+      nav?.classList.remove('dark');
+    }
+    if (!mode && nav) {
+      nav?.classList.add('dark');
+      nav?.classList.remove('light');
+    }
+  }, [mode]);
+
   return (
     <Space direction="vertical" style={{ width: '100%' }}>
       <Header id="nav-bar" className="light">
@@ -59,7 +71,7 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
         {!home && <ViewListButton />}
         {!home && <AddItemButton />}
 
-        <ThemeSwitch mode={mode} setMode={setMode} />
+        <ThemeSwitchButton mode={mode} setMode={setMode} />
       </Header>
     </Space>
   );

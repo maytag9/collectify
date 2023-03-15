@@ -1,0 +1,7 @@
+.ant-list-item .ant-list-item-extra {
+  align-self: center;
+}
+.ant-list-item .ant-list-item-extra img {
+  width: 300px;
+  /*height: 120px;*/
+}
