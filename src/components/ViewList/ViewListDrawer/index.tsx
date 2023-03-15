@@ -8,6 +8,7 @@ import {
   LockFilled
 } from '@ant-design/icons';
 import '../styles.css';
+import { useNavigate } from 'react-router';
 
 const { Search } = Input;
 
@@ -19,6 +20,7 @@ const ViewListDrawer: React.FunctionComponent<IViewListDrawer> = ({
   drawerVisible,
   setDrawerVisible
 }: IViewListDrawer) => {
+  const navigate = useNavigate();
   const onClose = () => {
     setDrawerVisible(false);
   };
@@ -32,7 +34,6 @@ const ViewListDrawer: React.FunctionComponent<IViewListDrawer> = ({
   );
 
   const data = Array.from({ length: 10 }).map((_, i) => ({
-    href: 'https://ant.design',
     privacy: false,
     title: `Collection ${i + 1}`,
     avatar: `https://joesch.moe/api/v1/random?key=${i}`,
@@ -105,7 +106,7 @@ const ViewListDrawer: React.FunctionComponent<IViewListDrawer> = ({
                 <List.Item.Meta
                   // avatar={<Avatar src={item.avatar} />}
                   title={
-                    <a href={item.href}>
+                    <a onClick={() => navigate('/collections')}>
                       {item.title}
                       &nbsp;&nbsp;&nbsp;
                       {item.privacy ? <LockFilled /> : <UnlockFilled />}

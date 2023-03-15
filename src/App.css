@@ -116,12 +116,12 @@ body {
 .ant-btn-default {
   background-color: #4c5eff;
   border: 0 solid #ccc !important;
-  color: #eee !important;
+  color: #eee;
 }
 button.ant-btn-default:hover,
 button.ant-btn-default:focus {
   background-color: #3f4ed4;
-  color: #f5f5f5 !important;
+  color: #f5f5f5;
 }
 .ant-layout,
 .ant-layout-footer {
