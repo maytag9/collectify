@@ -4,12 +4,12 @@ import Logo from '../Logo';
 import AddItemButton from '../AddItem/AddItemButton';
 import ViewListButton from '../ViewList/ViewListButton';
 import ThemeSwitchButton from '../ThemeButton';
-import { UserOutlined } from '@ant-design/icons';
+import { UserOutlined, SearchOutlined } from '@ant-design/icons';
 import './styles.css';
 import { useNavigate } from 'react-router';
 
 const { Header } = Layout;
-const { Search } = Input;
+// const { Search } = Input;
 
 /*const items1 = ['1', '2', '3'].map((key) => ({
   key,
@@ -63,12 +63,11 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
             <Logo />
           </Col>
           <Col span={8} style={{ height: '64px' }}>
-            <div style={{ margin: '16px 12px', height: '32px' }}>
-              <Search
-                placeholder="input search text"
+            <div>
+              <Input
                 allowClear
-                enterButton
-                style={{ backgroundColor: 'transparent' }}
+                className="search-bar"
+                suffix={<SearchOutlined className="search-icon" />}
               />
             </div>
           </Col>
