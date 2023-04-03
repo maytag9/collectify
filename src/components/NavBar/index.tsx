@@ -43,13 +43,19 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
 
   useEffect(() => {
     const nav = document.getElementById('nav-bar');
+    const body = document.getElementById('body');
+
     if (mode && nav) {
       nav?.classList.add('light');
       nav?.classList.remove('dark');
+      body?.classList.add('light');
+      body?.classList.remove('dark');
     }
     if (!mode && nav) {
       nav?.classList.add('dark');
       nav?.classList.remove('light');
+      body?.classList.add('dark');
+      body?.classList.remove('light');
     }
   }, [mode]);
 

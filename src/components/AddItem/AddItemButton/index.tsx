@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import { Dropdown } from 'antd';
 import type { MenuProps } from 'antd';
-import { PlusSquareOutlined, DownOutlined } from '@ant-design/icons';
+import {
+  PlusSquareOutlined,
+  DownOutlined,
+  FileAddOutlined,
+  AppstoreAddOutlined
+} from '@ant-design/icons';
 import AddItemDrawer from '../AddItemDrawer';
 
 const items = [
   {
     key: 'ITEM',
+    icon: <FileAddOutlined />,
     label: 'New Item'
   },
   {
     key: 'COLLECTION',
+    icon: <AppstoreAddOutlined />,
     label: 'New Collection'
   }
 ];
@@ -28,7 +35,7 @@ const AddItemButton = () => {
   };
   return (
     <>
-      <Dropdown menu={{ items, onClick }} className="add-new">
+      <Dropdown menu={{ items, onClick }} className="add-new" placement="bottomRight">
         <a
           onClick={e => {
             e.preventDefault();
