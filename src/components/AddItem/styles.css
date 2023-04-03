@@ -42,10 +42,13 @@
   background-color: #eeeeee;
   color: #a2a2a2 !important;
 }
-
+.add-new {
+  margin: 17px 16px 17px 16px;
+}
 .add-new button {
   background-color: #33b4a7;
-  padding: 0;
+
+  padding: 0 10px 0 10px;
 }
 .add-new button:hover,
 .add-new button:focus {

@@ -59,10 +59,10 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
     <Space direction="vertical" style={{ width: '100%' }}>
       <Header id="nav-bar" className="light" style={{ padding: '0 10px' }}>
         <Row style={{ width: '100%', height: '64px' }}>
-          <Col span={12} style={{ height: '64px' }}>
+          <Col md={13} xs={12} style={{ height: '64px' }}>
             <Logo />
           </Col>
-          <Col span={8} style={{ height: '64px' }}>
+          <Col md={6} xs={6} style={{ height: '64px' }}>
             <div>
               <Input
                 allowClear
@@ -71,10 +71,13 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
               />
             </div>
           </Col>
-          <Col span={2} style={{ height: '64px' }}>
+          <Col md={3} xs={0} style={{ height: '64px', textAlign: 'center' }}>
             {!home && <AddItemButton />}
           </Col>
-          <Col span={1} style={{ height: '64px' }}>
+          <Col md={0} xs={2} style={{ height: '64px', textAlign: 'center' }}>
+            &nbsp;
+          </Col>
+          <Col md={1} xs={3} style={{ height: '64px' }}>
             <Popover
               placement="bottomRight"
               title=""
@@ -89,7 +92,7 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
               trigger="click"
             >
               <Button
-                className="btn-primary btn-right"
+                className="btn-primary"
                 shape="round"
                 size="small"
                 onClick={() => navigate('/home')}
@@ -104,7 +107,7 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
               </Button>
             </Popover>
           </Col>
-          <Col span={1} style={{ height: '64px' }}>
+          <Col md={1} xs={1} style={{ height: '64px' }}>
             <ThemeSwitchButton mode={mode} setMode={setMode} />
           </Col>
         </Row>

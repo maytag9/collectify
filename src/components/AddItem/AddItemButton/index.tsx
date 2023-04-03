@@ -21,7 +21,11 @@ const AddItemButton = () => {
   };
 
   return (
-    <Dropdown.Button menu={{ items }} className="btn-right add-new" style={{ padding: '0' }}>
+    <Dropdown.Button
+      menu={{ items }}
+      className="add-new"
+      style={{ padding: '0', width: 'inherit' }}
+    >
       <Button
         onClick={showDrawer}
         size="small"
@@ -31,7 +35,9 @@ const AddItemButton = () => {
           padding: '0',
           margin: '0'
         }}
-      />
+      >
+        Create
+      </Button>
       {drawerVisible && (
         <AddItemDrawer drawerVisible={drawerVisible} setDrawerVisible={setDrawerVisible} />
       )}
