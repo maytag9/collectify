@@ -1,36 +1,13 @@
 import React, { useEffect } from 'react';
-import { Button, Layout, Space, Popover, List, Input, Row, Col } from 'antd';
+import { Layout, Space, Input, Row, Col } from 'antd';
 import Logo from '../Logo';
 import AddItemButton from '../AddItem/AddItemButton';
-import ViewListButton from '../ViewList/ViewListButton';
 import ThemeSwitchButton from '../ThemeButton';
-import { UserOutlined, SearchOutlined } from '@ant-design/icons';
+import { SearchOutlined } from '@ant-design/icons';
 import './styles.css';
-import { useNavigate } from 'react-router';
+import UserIcon from '../UserIcon';
 
 const { Header } = Layout;
-// const { Search } = Input;
-
-/*const items1 = ['1', '2', '3'].map((key) => ({
-  key,
-  label: `nav ${key}`,
-}));*/
-
-/*const NavBar = (themeMode, themeSecondary) => {
-  return (
-    <Space direction="vertical" style={{width: '100%'}}>
-      <Header theme={themeMode} style={themeStyle(themeMode)}>
-        <Logo themeMode={themeMode}/>
-        <AddItemButton theme={themeSecondary}/>
-        <NavMenu themeMode={themeMode} />
-      </Header>
-    </Space>
-  );
-};*/
-
-const data = (home: boolean | undefined) => {
-  return [!home && <ViewListButton />, 'Favorites', 'My Profile', 'Account Settings'];
-};
 
 interface INavBar {
   mode: boolean;
@@ -39,8 +16,6 @@ interface INavBar {
 }
 
 const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     const nav = document.getElementById('nav-bar');
     const body = document.getElementById('body');
@@ -58,8 +33,6 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
       body?.classList.remove('light');
     }
   }, [mode]);
-
-  const dataList = data(home);
 
   return (
     <Space direction="vertical" style={{ width: '100%' }}>
@@ -84,34 +57,7 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
             &nbsp;
           </Col>
           <Col md={1} xs={3} style={{ height: '64px' }}>
-            <Popover
-              placement="bottomRight"
-              title=""
-              content={
-                <List
-                  size="small"
-                  header={<div>Header</div>}
-                  dataSource={dataList}
-                  renderItem={item => <List.Item>{item}</List.Item>}
-                />
-              }
-              trigger="click"
-            >
-              <Button
-                className="btn-primary"
-                shape="round"
-                size="small"
-                onClick={() => navigate('/home')}
-                style={{
-                  width: '30px',
-                  height: '30px',
-                  padding: '0',
-                  margin: '17px 12px 17px 0px'
-                }}
-              >
-                <UserOutlined />
-              </Button>
-            </Popover>
+            <UserIcon home={home} />
           </Col>
           <Col md={1} xs={1} style={{ height: '64px' }}>
             <ThemeSwitchButton mode={mode} setMode={setMode} />

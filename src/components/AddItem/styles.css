@@ -50,7 +50,8 @@
 .add-new:focus {
   color: #39cbbd !important;
 }
-.ant-dropdown {
+.ant-dropdown,
+.ant-popover {
   z-index: 12000;
 }
 .ant-dropdown .ant-dropdown-menu {
