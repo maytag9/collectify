@@ -1,47 +1,53 @@
 import React, { useState } from 'react';
-import { Button, Dropdown } from 'antd';
-import { PlusSquareOutlined } from '@ant-design/icons';
+import { Dropdown } from 'antd';
+import type { MenuProps } from 'antd';
+import { PlusSquareOutlined, DownOutlined } from '@ant-design/icons';
 import AddItemDrawer from '../AddItemDrawer';
 
 const items = [
   {
-    key: '1',
+    key: 'ITEM',
     label: 'New Item'
   },
   {
-    key: '2',
+    key: 'COLLECTION',
     label: 'New Collection'
   }
 ];
 
 const AddItemButton = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const [addType, setAddType] = useState<string | undefined>(undefined);
+
   const showDrawer = () => {
     setDrawerVisible(true);
   };
-
+  const onClick: MenuProps['onClick'] = ({ key }) => {
+    setAddType(key);
+    showDrawer();
+  };
   return (
-    <Dropdown.Button
-      menu={{ items }}
-      className="add-new"
-      style={{ padding: '0', width: 'inherit' }}
-    >
-      <Button
-        onClick={showDrawer}
-        size="small"
-        icon={<PlusSquareOutlined />}
-        style={{
-          backgroundColor: 'transparent',
-          padding: '0',
-          margin: '0'
-        }}
-      >
-        Create
-      </Button>
+    <>
+      <Dropdown menu={{ items, onClick }} className="add-new">
+        <a
+          onClick={e => {
+            e.preventDefault();
+            showDrawer();
+          }}
+        >
+          <PlusSquareOutlined />
+          &nbsp; Create &nbsp;
+          <DownOutlined />
+        </a>
+      </Dropdown>
       {drawerVisible && (
-        <AddItemDrawer drawerVisible={drawerVisible} setDrawerVisible={setDrawerVisible} />
+        <AddItemDrawer
+          drawerVisible={drawerVisible}
+          setDrawerVisible={setDrawerVisible}
+          addType={addType}
+        />
       )}
-    </Dropdown.Button>
+    </>
   );
 };
 

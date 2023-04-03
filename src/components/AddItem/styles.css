@@ -44,15 +44,11 @@
 }
 .add-new {
   margin: 17px 16px 17px 16px;
+  color: #2b9f94;
 }
-.add-new button {
-  background-color: #33b4a7;
-
-  padding: 0 10px 0 10px;
-}
-.add-new button:hover,
-.add-new button:focus {
-  background-color: #2b9f94 !important;
+.add-new:hover,
+.add-new:focus {
+  color: #39cbbd !important;
 }
 .ant-dropdown {
   z-index: 12000;

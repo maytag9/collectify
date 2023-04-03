@@ -12,15 +12,19 @@ import FormByItemType from '../AddItemForms/FormByItemType';
 interface IAddItemDrawer {
   drawerVisible: boolean;
   setDrawerVisible: (showDrawer: boolean) => void;
+  addType: string | undefined;
 }
 const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
   drawerVisible,
-  setDrawerVisible
+  setDrawerVisible,
+  addType
 }: IAddItemDrawer) => {
   const [itemType, setItemType] = useState<string | undefined>(undefined);
   const onClose = () => {
     setDrawerVisible(false);
   };
+
+  const type = <span>{addType}</span>;
 
   return (
     <div>
@@ -48,7 +52,12 @@ const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
         >
           <Card
             className="add-item-card"
-            title={<h3>{!itemType ? 'Select an Item Type:' : `Item Type: ${itemType}`}</h3>}
+            title={
+              <>
+                {type}
+                <h3>{!itemType ? 'Select an Item Type:' : `Item Type: ${itemType}`}</h3>
+              </>
+            }
             extra={
               <Button
                 title="Reset Item Type"
