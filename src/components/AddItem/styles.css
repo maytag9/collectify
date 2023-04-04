@@ -73,6 +73,11 @@
 .ant-dropdown .ant-list-header .ant-dropdown-menu-item {
   color: #1c1c1c !important;
 }
+.ant-dropdown .ant-list-header .ant-btn {
+  width: 25px !important;
+  height: 25px !important;
+  margin: 2px 10px 2px 2px !important;
+}
 .ant-dropdown .ant-list-header .ant-dropdown-menu-item:hover,
 #body.dark .ant-dropdown .ant-list-header .ant-dropdown-menu-item:hover {
   background-color: transparent !important;

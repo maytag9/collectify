@@ -23,15 +23,13 @@ const UserMenu: React.FunctionComponent<IUserMenu> = ({ home }) => {
         header={
           <Space>
             <List.Item className="ant-dropdown-menu-item">
-              <Row align="bottom">
+              <Row align="top">
                 <Col>
                   <UserIcon />
                 </Col>
                 <Col>
-                  <Space direction="vertical">
-                    <span>Username</span>
-                    <span>admin</span>
-                  </Space>
+                  <div>Username</div>
+                  <div style={{ fontSize: '11px', lineHeight: '13px' }}>admin</div>
                 </Col>
               </Row>
             </List.Item>
