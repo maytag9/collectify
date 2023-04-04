@@ -5,7 +5,7 @@ import AddItemButton from '../AddItem/AddItemButton';
 import ThemeSwitchButton from '../ThemeButton';
 import { SearchOutlined } from '@ant-design/icons';
 import './styles.css';
-import UserIcon from '../UserIcon';
+import UserMenu from '../UserMenu';
 
 const { Header } = Layout;
 
@@ -57,7 +57,7 @@ const NavBar: React.FunctionComponent<INavBar> = ({ mode, setMode, home }) => {
             &nbsp;
           </Col>
           <Col md={1} xs={3} style={{ height: '64px' }}>
-            <UserIcon home={home} />
+            <UserMenu home={home} />
           </Col>
           <Col md={1} xs={1} style={{ height: '64px' }}>
             <ThemeSwitchButton mode={mode} setMode={setMode} />
