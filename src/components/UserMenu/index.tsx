@@ -5,7 +5,16 @@ import { Link } from 'react-router-dom';
 import UserIcon from '../UserIcon';
 
 const data = (home: boolean | undefined) => {
-  return [!home && <ViewListButton />, 'Favorites', 'My Profile', 'Account Settings'];
+  return !home
+    ? [
+        <div key={0}>
+          <ViewListButton />
+        </div>,
+        'Favorites',
+        'My Profile',
+        'Account Settings'
+      ]
+    : ['Favorites', 'My Profile', 'Account Settings'];
 };
 
 interface IUserMenu {
