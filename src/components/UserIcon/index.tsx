@@ -1,8 +1,7 @@
 import React from 'react';
-import { Button, Popover, List } from 'antd';
+import { Button, Dropdown, List } from 'antd';
 import ViewListButton from '../ViewList/ViewListButton';
 import { UserOutlined } from '@ant-design/icons';
-import './styles.css';
 import { Link } from 'react-router-dom';
 
 const data = (home: boolean | undefined) => {
@@ -16,18 +15,22 @@ interface IUserIcon {
 const UserIcon: React.FunctionComponent<IUserIcon> = ({ home }) => {
   const dataList = data(home);
   return (
-    <Popover
+    <Dropdown
+      className="user-dropdown"
       placement="bottomRight"
-      title=""
-      content={
+      dropdownRender={() => (
         <List
+          className="ant-dropdown-menu"
           size="small"
-          header={<div>Header</div>}
+          header={
+            <div>
+              <List.Item className="ant-dropdown-menu-item">Header</List.Item>
+            </div>
+          }
           dataSource={dataList}
-          renderItem={item => <List.Item>{item}</List.Item>}
+          renderItem={item => <List.Item className="ant-dropdown-menu-item">{item}</List.Item>}
         />
-      }
-      trigger="click"
+      )}
     >
       <Link to="/home">
         <Button
@@ -44,7 +47,7 @@ const UserIcon: React.FunctionComponent<IUserIcon> = ({ home }) => {
           <UserOutlined />
         </Button>
       </Link>
-    </Popover>
+    </Dropdown>
   );
 };
 export default UserIcon;

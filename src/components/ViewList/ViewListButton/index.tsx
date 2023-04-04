@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from 'antd';
 import ViewListDrawer from '../ViewListDrawer';
 
 const ViewListButton = () => {
@@ -10,9 +9,9 @@ const ViewListButton = () => {
 
   return (
     <>
-      <Button className="btn-primary btn-right" onClick={showDrawer} size="small">
+      <span className="main-link" onClick={showDrawer}>
         My Collections
-      </Button>
+      </span>
       {drawerVisible && (
         <ViewListDrawer drawerVisible={drawerVisible} setDrawerVisible={setDrawerVisible} />
       )}

@@ -67,20 +67,7 @@
 body {
   overflow: hidden;
 }
-/*
-@secondary-color: #63b349;
-@secondary-color-hover:  darken(@link-color, 10%);
 
-@lightMode-background: #ffffff;
-@lightMode-color: rgba(0, 0, 0, 0.88);
-@darkMode-background: #001529;
-@darkMode-color: rgba(255, 255, 255, 0.75);
-
-@lightMode-background-secondary: #aaa;
-@lightMode-color-secondary: #282828;
-@darkMode-background-secondary: #282828;
-@darkMode-color-secondary: #aaa;
-*/
 .lightPrimary {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.88);
