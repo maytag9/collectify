@@ -68,12 +68,12 @@
 }
 #nav-bar .search-bar {
   border-radius: 8px;
-  border: 1px solid #f5f5f5;
+  border: 1px solid rgba(37, 37, 37, 0.08);
   background-color: transparent;
 }
 #nav-bar.dark .search-bar {
   border-radius: 8px;
-  border: 1px solid rgb(37, 37, 37);
+  border: 1px solid rgba(37, 37, 37, 0.7);
   background-color: transparent;
 }
 #nav-bar .search-bar.ant-input-affix-wrapper .ant-input {

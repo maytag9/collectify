@@ -9,7 +9,7 @@ import {
 } from '@ant-design/icons';
 import AddItemDrawer from '../AddItemDrawer';
 
-const items = [
+export const createItems = [
   {
     key: 'ITEM',
     icon: <FileAddOutlined />,
@@ -33,6 +33,9 @@ const AddItemButton = () => {
     setAddType(key);
     showDrawer();
   };
+
+  const items = createItems;
+
   return (
     <>
       <Dropdown menu={{ items, onClick }} className="add-new" placement="bottomRight">

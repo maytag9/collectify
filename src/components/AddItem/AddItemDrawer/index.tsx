@@ -9,6 +9,9 @@ import {
   SkinOutlined
 } from '@ant-design/icons';
 import FormByItemType from '../AddItemForms/FormByItemType';
+import { makeLabel } from '../../../global/global_utils';
+import { createItems } from '../AddItemButton';
+
 interface IAddItemDrawer {
   drawerVisible: boolean;
   setDrawerVisible: (showDrawer: boolean) => void;
@@ -24,13 +27,24 @@ const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
     setDrawerVisible(false);
   };
 
-  const type = <span>{addType}</span>;
-
   return (
     <div>
       {drawerVisible && (
         <Drawer
-          title="Add a new item"
+          title={
+            <>
+              {createItems?.map((item, index) => {
+                if (item.key === addType)
+                  return (
+                    <div key={index}>
+                      {item.icon}
+                      &nbsp;&nbsp;
+                      {item.label}
+                    </div>
+                  );
+              })}
+            </>
+          }
           closable={true}
           width={720}
           onClose={onClose}
@@ -45,7 +59,7 @@ const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
                 Cancel
               </Button>
               <Button className="btn-primary" onClick={onClose} type="primary">
-                Add Item
+                Create {makeLabel(addType)}
               </Button>
             </Space>
           }
@@ -54,7 +68,6 @@ const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
             className="add-item-card"
             title={
               <>
-                {type}
                 <h3>{!itemType ? 'Select an Item Type:' : `Item Type: ${itemType}`}</h3>
               </>
             }

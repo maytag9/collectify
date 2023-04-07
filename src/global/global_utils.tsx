@@ -19,3 +19,9 @@ export const genericSorter = (a: any, b: any, field: string, sortOrder?: string)
     return a[field] > b[field] ? 1 : a[field] < b[field] ? -1 : 0;
   else return sortEmptyCell(a[field], b[field], sortOrder);
 };
+
+export const makeLabel = (s: string | undefined) => {
+  const letter = s?.charAt(0).toUpperCase();
+  const word = s?.slice(1).toLowerCase().replaceAll('_', ' ');
+  return letter && word ? letter + word : '';
+};
