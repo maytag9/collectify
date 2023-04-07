@@ -20,8 +20,12 @@ export const genericSorter = (a: any, b: any, field: string, sortOrder?: string)
   else return sortEmptyCell(a[field], b[field], sortOrder);
 };
 
-export const makeLabel = (s: string | undefined) => {
-  const letter = s?.charAt(0).toUpperCase();
-  const word = s?.slice(1).toLowerCase().replaceAll('_', ' ');
-  return letter && word ? letter + word : '';
+export const toTitleCase = (str: string) => {
+  return str?.replace(/\w\S*/g, function (txt: string) {
+    return txt?.charAt(0).toUpperCase() + txt?.substr(1).toLowerCase();
+  });
+};
+
+export const makeLabel = (str: string | undefined) => {
+  return str != undefined && toTitleCase(str?.replaceAll('_', ' '));
 };
