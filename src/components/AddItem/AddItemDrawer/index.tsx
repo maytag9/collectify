@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
-import { Button, Drawer, Space, Row, Col, Card } from 'antd';
+import React from 'react';
+import { Button, Drawer, Space } from 'antd';
 import '../styles.css';
-import {
-  ReloadOutlined,
-  PictureOutlined,
-  PlaySquareOutlined,
-  ReadOutlined,
-  SkinOutlined
-} from '@ant-design/icons';
-import FormByItemType from '../AddItemForms/FormByItemType';
 import { makeLabel } from '../../../global/global_utils';
 import { createItems } from '../AddItemButton';
+import CreateItem from './CreateItem';
+import CreateCollection from './CreateCollection';
 
 interface IAddItemDrawer {
   drawerVisible: boolean;
@@ -22,10 +16,10 @@ const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
   setDrawerVisible,
   addType
 }: IAddItemDrawer) => {
-  const [itemType, setItemType] = useState<string | undefined>(undefined);
   const onClose = () => {
     setDrawerVisible(false);
   };
+  const selectedAddType = addType || 'ITEM';
 
   return (
     <div>
@@ -34,7 +28,7 @@ const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
           title={
             <>
               {createItems?.map((item, index) => {
-                if (item.key === addType)
+                if (item.key === selectedAddType)
                   return (
                     <div key={index}>
                       {item.icon}
@@ -59,67 +53,13 @@ const AddItemDrawer: React.FunctionComponent<IAddItemDrawer> = ({
                 Cancel
               </Button>
               <Button className="btn-primary" onClick={onClose} type="primary">
-                Create {makeLabel(addType)}
+                Create {makeLabel(selectedAddType)}
               </Button>
             </Space>
           }
         >
-          <Card
-            className="add-item-card"
-            title={
-              <>
-                <h3>{!itemType ? 'Select an Item Type:' : `Item Type: ${itemType}`}</h3>
-              </>
-            }
-            extra={
-              <Button
-                title="Reset Item Type"
-                shape="round"
-                size="small"
-                icon={<ReloadOutlined />}
-                onClick={() => setItemType(undefined)}
-              />
-            }
-          >
-            {!itemType ? (
-              <Row justify="space-between">
-                <Col>
-                  <div className="select-item-type" onClick={() => setItemType('Any')}>
-                    <div className="item-type-icon">
-                      <PictureOutlined />
-                    </div>
-                    <span>Any</span>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="select-item-type" onClick={() => setItemType('Movie')}>
-                    <div className="item-type-icon">
-                      <PlaySquareOutlined />
-                    </div>
-                    <span>Movie</span>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="select-item-type" onClick={() => setItemType('Book')}>
-                    <div className="item-type-icon">
-                      <ReadOutlined />
-                    </div>
-                    <span>Book</span>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="select-item-type" onClick={() => setItemType('Fashion')}>
-                    <div className="item-type-icon">
-                      <SkinOutlined />
-                    </div>
-                    <span>Fashion</span>
-                  </div>
-                </Col>
-              </Row>
-            ) : (
-              <FormByItemType itemType={itemType} />
-            )}
-          </Card>
+          {selectedAddType === 'ITEM' && <CreateItem />}
+          {selectedAddType === 'COLLECTION' && <CreateCollection />}
         </Drawer>
       )}
     </div>

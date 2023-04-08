@@ -46,6 +46,11 @@ body.dark .btn-wrapper .btn-secondary {
   background-color: rgba(180, 180, 180, 0.2) !important;
   color: #a2a2a2 !important;
 }
+body.dark .btn-wrapper .btn-secondary:hover,
+body.dark .btn-wrapper .btn-primary:hover {
+  background-color: #2b9f94 !important;
+  color: #f5f5f5 !important;
+}
 .btn-wrapper .btn-primary {
   background-color: #33b4a7 !important;
   color: #f5f5f5 !important;
